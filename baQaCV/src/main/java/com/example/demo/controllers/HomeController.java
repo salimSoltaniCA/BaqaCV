@@ -27,4 +27,6 @@ public class HomeController {
 	public List<Profile> getProfiles() {
 		return (List<Profile>) profile.findAll();
 	}
+	
+	//TODO : Rajouter d'autres methodes : findByIdIAM ..
 }

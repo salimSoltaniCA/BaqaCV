@@ -23,7 +23,7 @@ public class HomeController {
 		
 	}
 
-	@GetMapping("/greeting")
+	@GetMapping("/getProfiles")
 	public List<Profile> getProfiles() {
 		return (List<Profile>) profile.findAll();
 	}

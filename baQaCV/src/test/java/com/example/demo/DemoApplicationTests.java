@@ -1,8 +1,6 @@
 package com.example.demo;
 
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -12,9 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class DemoApplicationTests {
 
-	private static final Logger log = LoggerFactory.getLogger(DemoApplicationTests.class);
-	 
-    private final String SERVER_URL = "http://localhost";
+	private final String SERVER_URL = "http://localhost";
     private final String THINGS_ENDPOINT = "/things";
  
     private RestTemplate restTemplate;

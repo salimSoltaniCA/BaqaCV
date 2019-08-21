@@ -33,9 +33,7 @@ public class Profile extends Person {
 	private String login;
 	@NotNull
 	String password;
-	FamilySituation familySituation;
-	Address adr;
-	Phone phone;
+	FamilySituation familySituation;	
 	String driversLicense;
 		
 	/**-------- PROFESSIONAL DATA DATA ---------*/
@@ -55,14 +53,15 @@ public class Profile extends Person {
 	//video
 
 	@Builder(builderMethodName = "profileBuilder")
-	public Profile(String idIAM, String firstName, String lastName, Date birthDay, String email, Address adr, Phone phone, String login ,String password, List<Experience> experiences, HashSet<Formation> trainings, HashSet<String> skills, 
-			HashSet<String> patiences, Status status, Visibility visibility, boolean displacement, boolean move, String priorNotice, String objectif, FamilySituation familySituation, String driversLicense ) {
+	public Profile(String idIAM, String firstName, String lastName, Date birthDay, String email, 
+				   Address adr, Phone phone, String login ,String password, List<Experience> experiences, 
+				   HashSet<Formation> trainings, HashSet<String> skills, HashSet<String> patiences, Status status, Visibility visibility, 
+				   boolean displacement, boolean move, String priorNotice, String objectif, FamilySituation familySituation, 
+				   String driversLicense ) {
 		super(idIAM, firstName, lastName, birthDay , email, adr, phone);
 		
 		this.login= login;		
-		this.password=password;	
-		this.adr=adr;
-		this.phone=phone;
+		this.password=password;		
 		this.driversLicense=driversLicense;
 		this.experiences=experiences;
 		this.trainings=trainings;
@@ -74,8 +73,7 @@ public class Profile extends Person {
 		this.move=move;
 		this.priorNotice =priorNotice;
 		this.objectif =objectif; 
-		this.familySituation=familySituation;	
-		
+		this.familySituation=familySituation;		
 	}
 
 }
